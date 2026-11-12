@@ -1,0 +1,65 @@
+{
+  "serial": "emulator-5554",
+  "passed": true,
+  "original": {
+    "hydronudge.db": {
+      "integrity": [
+        [
+          "ok"
+        ]
+      ],
+      "rows": {
+        "android_metadata": 1,
+        "drinks": 0,
+        "favorites": 0
+      },
+      "sha256": "bddf206f0ef38564407027d0c75e147feb57cafa8bd3b89cddfd1c7312de67b2"
+    }
+  },
+  "after": {
+    "hydronudge.db": {
+      "integrity": [
+        [
+          "ok"
+        ]
+      ],
+      "rows": {
+        "android_metadata": 1,
+        "drinks": 0,
+        "favorites": 0
+      },
+      "sha256": "bddf206f0ef38564407027d0c75e147feb57cafa8bd3b89cddfd1c7312de67b2"
+    }
+  },
+  "note": "Original compiled source APK and final debug APK use the existing workstation QA certificate. Install -r, no uninstall or data clearing. This verifies fixture-data compatibility, not the unavailable production signing identity.",
+  "originalApkSha256": "b5c50eb0d93d7f68f82eab59cf42bcbe4ec652954e286d93ff020e69bf35e6af",
+  "finalApkSha256": "7ba979ec5c8ec34b27c0c535ddfe082e6657ec7f8524b1dc9d5158d6b1a9cc0a",
+  "dataStoreBefore": {
+    "GlanceAppWidgetManager-app.hydronudge.preferences_pb": {
+      "bytes": 160,
+      "sha256": "f50ea9a7ab69d8448d7f0aea9e1356bddea96a19a36a179dce4c70036d39ad2f"
+    },
+    "GlanceAppWidgetManager.preferences_pb": {
+      "bytes": 160,
+      "sha256": "f50ea9a7ab69d8448d7f0aea9e1356bddea96a19a36a179dce4c70036d39ad2f"
+    },
+    "hydronudge_preferences.preferences_pb": {
+      "bytes": 1177,
+      "sha256": "51ae095bdf9b374b5e171cdff51c481258ecab512da365e4aa605ec62d48f1d4"
+    }
+  },
+  "dataStoreAfter": {
+    "GlanceAppWidgetManager-app.hydronudge.preferences_pb": {
+      "bytes": 160,
+      "sha256": "f50ea9a7ab69d8448d7f0aea9e1356bddea96a19a36a179dce4c70036d39ad2f"
+    },
+    "GlanceAppWidgetManager.preferences_pb": {
+      "bytes": 160,
+      "sha256": "f50ea9a7ab69d8448d7f0aea9e1356bddea96a19a36a179dce4c70036d39ad2f"
+    },
+    "hydronudge_preferences.preferences_pb": {
+      "bytes": 1177,
+      "sha256": "51ae095bdf9b374b5e171cdff51c481258ecab512da365e4aa605ec62d48f1d4"
+    }
+  }
+}

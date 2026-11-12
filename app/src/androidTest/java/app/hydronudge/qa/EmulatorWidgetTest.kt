@@ -4,7 +4,7 @@ import android.appwidget.AppWidgetManager
 import android.content.ComponentName
 import android.graphics.Bitmap
 import androidx.compose.ui.test.*
-import androidx.compose.ui.test.junit4.v2.createAndroidComposeRule
+import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.uiautomator.*
@@ -43,19 +43,19 @@ open class EmulatorWidgetTest {
             assertTrue("Launcher does not support widget pin requests",manager.isRequestPinAppWidgetSupported)
             InstrumentationRegistry.getInstrumentation().runOnMainSync {assertTrue(manager.requestPinAppWidget(provider,null,null))}
             val add=device.wait(Until.findObject(By.text(Pattern.compile("(?i)^(Add|Add automatically|Add to home screen|Dodaj)$"))),10000)
-            check(add!=null && device.hasObject(By.text(Pattern.compile(".*HydroNudge.*",Pattern.DOTALL)))) {"Own widget confirmation needs manual approval; no other UI was clicked"}
+            check(add!=null && device.hasObject(By.text(Pattern.compile(".*Mizupuku.*",Pattern.DOTALL)))) {"Own widget confirmation needs manual approval; no other UI was clicked"}
             add.click()
             compose.waitUntil(20000) {manager.getAppWidgetIds(provider).any {it !in originalIds}}
             val created=manager.getAppWidgetIds(provider).filter {it !in originalIds}
             assertEquals(1,created.size);newId=created.single()
-            QaArtifacts.note("PASS emulator launcher created one new HydroNudge widget instance")
+            QaArtifacts.note("PASS emulator launcher created one new Mizupuku widget instance")
             device.pressHome()
             // emulator can leave a newly pinned widget in resize/selection mode, consuming its first tap.
             device.pressBack()
-            device.wait(Until.hasObject(By.text("HydroNudge")),10000)
+            device.wait(Until.hasObject(By.text("Mizupuku")),10000)
             val deadline=System.currentTimeMillis()+20000
             while(widgetRoot==null && System.currentTimeMillis()<deadline) {
-                for(brand in device.findObjects(By.text("HydroNudge"))) {
+                for(brand in device.findObjects(By.text("Mizupuku"))) {
                     var candidate: UiObject2?=brand
                     repeat(4) {
                         val node=candidate
@@ -88,7 +88,7 @@ open class EmulatorWidgetTest {
             val crop=Bitmap.createBitmap(full,bounds.left,bounds.top,bounds.width(),bounds.height())
             File(QaArtifacts.folder,"11-widget-medium-crop.png").outputStream().use {crop.compress(Bitmap.CompressFormat.PNG,100,it)}
             crop.recycle();full.recycle()
-            QaArtifacts.note("SCREENSHOT 11-widget-medium-crop.png (only HydroNudge widget bounds)")
+            QaArtifacts.note("SCREENSHOT 11-widget-medium-crop.png (only Mizupuku widget bounds)")
         } finally {
             if(newId!=null && manager.getAppWidgetIds(provider).contains(newId)) {
                 runCatching {

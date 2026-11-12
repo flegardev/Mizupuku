@@ -1,0 +1,100 @@
+[
+  {
+    "file": "play-store/screenshots/phone/01-light-home.png",
+    "source": "kissaten/evidence/hydronudge/screenshots/matrix-standard/light-home.png",
+    "sourceCapturedAt": "2026-11-11T21:09:44.522711+01:00",
+    "sourceSha256": "ac64aa7563f243b984fcf1f576c1abca6b5dcc26c7331ff122dcf0c4cfd312e6",
+    "sha256": "a8696b67f8a23f0a2691e16a80800f463058dcda2d2690cff88299395ed999d2",
+    "size": [
+      1080,
+      1920
+    ],
+    "mode": "RGB",
+    "pixelMatchAfterRgbConversion": true,
+    "description": "Mizupuku light home"
+  },
+  {
+    "file": "play-store/screenshots/phone/02-history.png",
+    "source": "kissaten/evidence/hydronudge/screenshots/matrix-standard/history.png",
+    "sourceCapturedAt": "2026-11-11T21:11:05.901307+01:00",
+    "sourceSha256": "0315ebcb90a43003048903d5602cf8cb97eb823fd9c14b0347c43ec49fe99fd3",
+    "sha256": "fa11a93d72f62060d18e82a0b70ded25001bc936fc5835341cfea9d92a796139",
+    "size": [
+      1080,
+      1920
+    ],
+    "mode": "RGB",
+    "pixelMatchAfterRgbConversion": true,
+    "description": "Mizupuku history"
+  },
+  {
+    "file": "play-store/screenshots/phone/03-settings.png",
+    "source": "kissaten/evidence/hydronudge/screenshots/matrix-standard/settings.png",
+    "sourceCapturedAt": "2026-11-11T21:11:11.840382+01:00",
+    "sourceSha256": "97e2ef08bb2f993b7608f04aaa8fcfc77ec6650696b940646ce21c6667b92c38",
+    "sha256": "1dffbc7e8c791ca82f31b85ced1afb1972c9c43b72b3f62054ca1ab2b5bbb75b",
+    "size": [
+      1080,
+      1920
+    ],
+    "mode": "RGB",
+    "pixelMatchAfterRgbConversion": true,
+    "description": "Mizupuku settings"
+  },
+  {
+    "file": "play-store/screenshots/phone/04-custom-entry.png",
+    "source": "kissaten/evidence/hydronudge/screenshots/matrix-standard/custom-entry.png",
+    "sourceCapturedAt": "2026-11-11T21:12:49.854968+01:00",
+    "sourceSha256": "2a6606be415d9d270023ad9a6404f1b282d713b5f4ffbd793b1df7513927f249",
+    "sha256": "a01b209855666534a2c5566cbd19a360d6e7557dfe022a4880df4e81780e469c",
+    "size": [
+      1080,
+      1920
+    ],
+    "mode": "RGB",
+    "pixelMatchAfterRgbConversion": true,
+    "description": "Mizupuku custom entry"
+  },
+  {
+    "file": "play-store/screenshots/phone/05-theme-studio.png",
+    "source": "kissaten/evidence/hydronudge/screenshots/matrix-standard/theme-studio.png",
+    "sourceCapturedAt": "2026-11-11T21:13:02.602138+01:00",
+    "sourceSha256": "d79ecd58cb4f8538b13176ee84a2253c68f9743fcb476dc443121c99ecbeb30e",
+    "sha256": "187b57de98fc22a240a71fa5bd3df1f68965298c11632b360586741edf233f74",
+    "size": [
+      1080,
+      1920
+    ],
+    "mode": "RGB",
+    "pixelMatchAfterRgbConversion": true,
+    "description": "Mizupuku theme studio"
+  },
+  {
+    "file": "play-store/screenshots/phone/06-dark-home.png",
+    "source": "kissaten/evidence/hydronudge/screenshots/matrix-standard/dark-home.png",
+    "sourceCapturedAt": "2026-11-11T21:10:09.691269+01:00",
+    "sourceSha256": "b72975a960d3a7c9bf5326f2b191514df99136110ce488abdf2b80984cbd05a6",
+    "sha256": "578cea2ee7eaba78b277f378f00fe5912a59e36ab696f41440898156d0e53854",
+    "size": [
+      1080,
+      1920
+    ],
+    "mode": "RGB",
+    "pixelMatchAfterRgbConversion": true,
+    "description": "Mizupuku dark home"
+  },
+  {
+    "file": "play-store/screenshots/phone/07-oled-home.png",
+    "source": "kissaten/evidence/hydronudge/screenshots/matrix-standard/oled-home.png",
+    "sourceCapturedAt": "2026-11-11T21:10:34.818439+01:00",
+    "sourceSha256": "a255d3f2a231419ed1b7c0a9e5c214caa65575aaefd0063de4fd9ec45518b2f0",
+    "sha256": "f1bbed577452bc4c9b3efa7ead3e346190d275fdc1f0819a19b68be8a6b3c2cd",
+    "size": [
+      1080,
+      1920
+    ],
+    "mode": "RGB",
+    "pixelMatchAfterRgbConversion": true,
+    "description": "Mizupuku oled home"
+  }
+]

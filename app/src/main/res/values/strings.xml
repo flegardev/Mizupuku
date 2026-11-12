@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">HydroNudge</string>
+    <string name="app_name">Mizupuku</string>
     <string name="widget_description">Today’s water progress. Resize for one-tap water actions.</string>
     <string name="tile_name">Log water</string>
     <plurals name="recorded_days">

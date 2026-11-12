@@ -1,0 +1,1 @@
+Genuine running Android app captures from the disposable API 37 emulator. Fixture/demo data only. RGB encoding only; no retouching, cropping, compositing, UI overlays or simulated features. See ../../SCREENSHOT_PROVENANCE.json for source hashes. The device status bar is part of the capture.

@@ -1,0 +1,1 @@
+Reviewed local evidence from 11–12 November 2026. Production remains BLOCKED. [Repository overview](../README.md) explains scope, sanitization, reproduction and open gates. Public snapshots exclude raw runtime databases, exports and recovery archives.

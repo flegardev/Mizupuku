@@ -5,7 +5,7 @@ import android.app.NotificationManager
 import android.Manifest
 import android.content.pm.ActivityInfo
 import androidx.compose.ui.test.*
-import androidx.compose.ui.test.junit4.v2.createAndroidComposeRule
+import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.uiautomator.UiDevice
 import app.hydronudge.*
@@ -29,6 +29,10 @@ open class OceanFixture {
     fun records()=runBlocking {app.repository.all()}
     fun waitFor(check:()->Boolean)=compose.waitUntil(20000,check)
     fun tag(value:String)=compose.onNodeWithTag(value)
+    fun dashboardTag(value:String): SemanticsNodeInteraction {
+        tag("dashboard-list").performScrollToNode(hasTestTag(value))
+        return tag(value)
+    }
     fun dismiss() { if(compose.onAllNodesWithContentDescription("Dismiss").fetchSemanticsNodes().isNotEmpty()) compose.onNodeWithContentDescription("Dismiss").performClick() }
     fun capture(name:String) {
         compose.waitForIdle(); Thread.sleep(1000); compose.waitForIdle()
@@ -37,13 +41,15 @@ open class OceanFixture {
     fun prefs(value:HydroSettings)=runBlocking {app.preferences.save(value)}
     fun seed(ml:Int,id:String="fixture")=runBlocking {app.repository.add(DrinkEntry(id=id,name="Water",category="WATER",amountMl=ml))}
     fun top()=tag("dashboard-list").performScrollToIndex(0)
-    fun percent(value:Long) { top(); waitFor {compose.onAllNodesWithText("$value% completed").fetchSemanticsNodes().isNotEmpty()} }
+    fun percent(value:Long) { tag("dashboard-list").performScrollToNode(hasText("$value% completed")); waitFor {compose.onAllNodesWithText("$value% completed").fetchSemanticsNodes().isNotEmpty()} }
     @Before fun isolate() {
         check(Build.MODEL.contains("sdk",true) && QaArtifacts.shell("getprop ro.kernel.qemu").trim()=="1") {"Emulator required"}
         original=runBlocking {app.repository.snapshot()}; settings=runBlocking {app.preferences.settings.first()}
         File(QaArtifacts.folder,"before-fixture.json").writeText(BackupCodec.encode(original))
         runBlocking {app.repository.clearAll()}
-        prefs(HydroSettings(theme=ThemeMode.DARK,dynamicColors=false))
+        // A goal is optional in production. These percentage scenarios explicitly
+        // choose their own deterministic 2500 mL fixture goal.
+        prefs(HydroSettings(goalMl=2500,theme=ThemeMode.DARK,dynamicColors=false))
         waitFor {compose.onAllNodesWithTag("dashboard-list").fetchSemanticsNodes().isNotEmpty()}
     }
     @After fun restore() {
@@ -53,16 +59,50 @@ open class OceanFixture {
 }
 
 open class OceanFunctionalTest : OceanFixture() {
+    @Test fun completeThemeStudioScrollsWhileDoneRemainsReachable() {
+        top()
+        tag("open-theme-studio").performClick()
+        compose.onNodeWithText("Done").assertIsDisplayed()
+        compose.onNodeWithText("Hydration Vessel Style").performScrollTo().assertIsDisplayed()
+        compose.onNodeWithText("Done").assertIsDisplayed().performClick()
+        tag("dashboard-list").assertExists()
+    }
+    @Test fun quickServingIsVisibleOnOpeningDashboard() {
+        top()
+        tag("quick-add:250").assertIsDisplayed()
+    }
+    @Test fun largeEntryAndQuickServingRequireReviewBeforeWriting() {
+        dashboardTag("choose-drink").performClick()
+        tag("drink-amount").performTextReplacement("2000")
+        tag("save-drink").performClick()
+        compose.onNodeWithText("Check the amount").assertIsDisplayed()
+        assertTrue(records().isEmpty())
+        compose.onNodeWithText("Review amount").performClick()
+        tag("drink-amount").performTextReplacement("250")
+        tag("save-drink").performClick()
+        waitFor { records().size == 1 }
+        assertEquals(250, records().single().amountMl)
+        prefs(runBlocking { app.preferences.settings.first() }.copy(quickAmounts=listOf(2000,250,330,500)))
+        dismiss()
+        dashboardTag("quick-add:2000").performClick()
+        compose.onNodeWithText("Check the amount").assertIsDisplayed()
+        compose.onNodeWithText("Cancel").performClick()
+        assertEquals(1, records().size)
+        dashboardTag("quick-add:2000").performClick()
+        compose.onNodeWithText("Log entry").performClick()
+        waitFor { records().size == 2 }
+        assertTrue(records().any { it.amountMl == 2000 })
+    }
     @Test fun quickCustomEditDeleteUndoGoalsHistoryAndSettings() {
         percent(0)
         for(ml in listOf(150,250,330,500,250)) {
             dismiss(); val before=records().size
-            tag("quick-add:$ml").performScrollTo().performClick()
+            dashboardTag("quick-add:$ml").performClick()
             waitFor {records().size==before+1}
             assertEquals(ml,records().first().amountMl);assertTrue(records().all {it.isWater()})
         }
         assertEquals(1480L,records().sumOf {it.amountMl.toLong()})
-        dismiss();tag("choose-drink").performScrollTo().performClick()
+        dismiss();dashboardTag("choose-drink").performClick()
         for(value in listOf("0","-1","20001","999999999999","invalid")) {
             tag("drink-amount").performScrollTo().performTextReplacement(value)
             tag("save-drink").assertIsNotEnabled()
@@ -83,7 +123,7 @@ open class OceanFunctionalTest : OceanFixture() {
         waitFor {records().none {it.id==saved.id}}
         compose.onNodeWithText("Undo").performClick();waitFor {records().any {it.id==saved.id}}
         assertEquals(300,records().single {it.id==saved.id}.amountMl)
-        dismiss();tag("choose-drink").performScrollTo().performClick()
+        dismiss();dashboardTag("choose-drink").performClick()
         compose.onNodeWithText("Cancel").performClick();assertEquals(6,records().size)
         tag("nav:history").performClick()
         for(range in listOf("Today","7 days","30 days","Month")) {
@@ -124,7 +164,7 @@ open class OceanFunctionalTest : OceanFixture() {
         val clockSetting=QaArtifacts.shell("settings get system time_12_24").trim()
         try {
             QaArtifacts.shell("settings put system time_12_24 24")
-            tag("choose-drink").performScrollTo().performClick()
+            dashboardTag("choose-drink").performClick()
             compose.onNodeWithText("Change time").performScrollTo().performClick()
             device.waitForIdle()
             device.dumpWindowHierarchy(File(QaArtifacts.folder,"time-picker.xml"))
@@ -143,7 +183,10 @@ open class OceanFunctionalTest : OceanFixture() {
             checkNotNull(device.wait(androidx.test.uiautomator.Until.findObject(androidx.test.uiautomator.By.res("android:id/input_hour")),5000)).text="0"
             checkNotNull(device.findObject(androidx.test.uiautomator.By.res("android:id/input_minute"))).text="0"
             checkNotNull(device.findObject(androidx.test.uiautomator.By.res("android:id/button1"))).click()
-            androidx.test.espresso.Espresso.closeSoftKeyboard()
+            // The custom-entry dialog owns focus, not the underlying Activity
+            // root Espresso selects for closeSoftKeyboard on API 37.
+            check(device.wait(androidx.test.uiautomator.Until.gone(androidx.test.uiautomator.By.res("android:id/input_hour")), 10000))
+            device.waitForIdle()
             tag("save-drink").assertIsEnabled().performClick();waitFor {records().size==1}
             val timestamp=java.time.Instant.ofEpochMilli(records().single().timestamp).atZone(java.time.ZoneId.systemDefault())
             assertEquals(0,timestamp.hour);assertEquals(0,timestamp.minute)

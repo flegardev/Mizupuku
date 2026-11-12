@@ -1,0 +1,35 @@
+{
+  "serial": "emulator-5554",
+  "before": {
+    "hydronudge.db": {
+      "integrity": [
+        [
+          "ok"
+        ]
+      ],
+      "rows": {
+        "android_metadata": 1,
+        "drinks": 0,
+        "favorites": 0
+      },
+      "sha256": "bddf206f0ef38564407027d0c75e147feb57cafa8bd3b89cddfd1c7312de67b2"
+    }
+  },
+  "after": {
+    "hydronudge.db": {
+      "integrity": [
+        [
+          "ok"
+        ]
+      ],
+      "rows": {
+        "android_metadata": 1,
+        "drinks": 0,
+        "favorites": 0
+      },
+      "sha256": "bddf206f0ef38564407027d0c75e147feb57cafa8bd3b89cddfd1c7312de67b2"
+    }
+  },
+  "passed": true,
+  "note": "Read-only database row digest, restart, integrity_check; raw fixture databases are private QA artifacts, never store assets."
+}

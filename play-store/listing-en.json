@@ -1,0 +1,8 @@
+{
+  "title": "Mizupuku",
+  "shortDescription": "A gentle offline water journal with reminders, history and personal themes.",
+  "fullDescription": "Mizupuku — a quiet little everyday companion.\n\nLog water with quick servings or a custom amount. Keep an optional personal goal, choose mL or fluid ounces, review history and use configurable reminders and Android widgets. Your existing records and supported legacy JSON backups remain compatible. Hydration needs vary; this is a personal logging tool, not medical advice.\n\nMake it your own with light, dark, system and OLED appearances, selectable color palettes and a custom accent. Some accent tones are adjusted for readability. Japanese-designed fonts and original café illustrations bring a little warmth to the everyday interface.\n\nFree forever. No advertisements, subscriptions, paid features, accounts, AI or tracking SDKs. Core features work offline and personal records stay in private storage on this device. Automatic Android cloud backup is disabled. You control exports: files are unencrypted, and the document provider you choose may store them in the cloud. Keep a private backup before moving to a new device.\n\nAndroid may delay reminders to protect battery life; notification permission and system settings affect delivery.\n\nFormerly HydroNudge. The existing Android package and supported backup formats are retained.\n",
+  "supportEmail": "[OWNER_SUPPORT_EMAIL]",
+  "privacyPolicyUrl": "[OWNER_APPROVED_PRIVACY_URL]",
+  "status": "DRAFT — names and submission require owner approval"
+}

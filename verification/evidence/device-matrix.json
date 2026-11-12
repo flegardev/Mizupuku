@@ -1,0 +1,128 @@
+[
+  {
+    "configuration": "small",
+    "size": "720x1280",
+    "density": 360,
+    "font": 1.0,
+    "theme": "light",
+    "reducedMotion": true,
+    "retainedFromPreviousRun": true
+  },
+  {
+    "configuration": "small",
+    "size": "720x1280",
+    "density": 360,
+    "font": 1.0,
+    "theme": "dark",
+    "reducedMotion": true,
+    "retainedFromPreviousRun": true
+  },
+  {
+    "configuration": "small",
+    "size": "720x1280",
+    "density": 360,
+    "font": 1.0,
+    "theme": "oled",
+    "reducedMotion": true,
+    "retainedFromPreviousRun": true
+  },
+  {
+    "configuration": "small",
+    "size": "720x1280",
+    "density": 360,
+    "font": 1.0,
+    "theme": "system",
+    "reducedMotion": true,
+    "retainedFromPreviousRun": true
+  },
+  {
+    "configuration": "large",
+    "size": "1440x2560",
+    "density": 480,
+    "font": 1.0,
+    "theme": "light",
+    "reducedMotion": true,
+    "retainedFromPreviousRun": true
+  },
+  {
+    "configuration": "tablet",
+    "size": "1600x2560",
+    "density": 240,
+    "font": 1.0,
+    "theme": "light",
+    "reducedMotion": true,
+    "retainedFromPreviousRun": true
+  },
+  {
+    "configuration": "tablet",
+    "size": "1600x2560",
+    "density": 240,
+    "font": 1.0,
+    "theme": "dark",
+    "reducedMotion": true,
+    "retainedFromPreviousRun": true
+  },
+  {
+    "configuration": "tablet",
+    "size": "1600x2560",
+    "density": 240,
+    "font": 1.0,
+    "theme": "oled",
+    "reducedMotion": true,
+    "retainedFromPreviousRun": true
+  },
+  {
+    "configuration": "tablet",
+    "size": "1600x2560",
+    "density": 240,
+    "font": 1.0,
+    "theme": "system",
+    "reducedMotion": true,
+    "retainedFromPreviousRun": true
+  },
+  {
+    "configuration": "standard",
+    "size": "1080x1920",
+    "density": 420,
+    "font": 1.0,
+    "theme": "light",
+    "reducedMotion": true
+  },
+  {
+    "configuration": "standard",
+    "size": "1080x1920",
+    "density": 420,
+    "font": 1.0,
+    "theme": "dark",
+    "reducedMotion": true
+  },
+  {
+    "configuration": "standard",
+    "size": "1080x1920",
+    "density": 420,
+    "font": 1.0,
+    "theme": "oled",
+    "reducedMotion": true
+  },
+  {
+    "configuration": "standard",
+    "size": "1080x1920",
+    "density": 420,
+    "font": 1.0,
+    "theme": "system",
+    "reducedMotion": true
+  },
+  {
+    "configuration": "small-font150",
+    "size": "720x1280",
+    "density": 360,
+    "font": 1.5,
+    "theme": "light",
+    "reducedMotion": true
+  },
+  {
+    "configuration": "offline-restart",
+    "wifi": "0",
+    "mobileData": "0"
+  }
+]

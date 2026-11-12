@@ -1,21 +1,21 @@
 # HydroNudge Play closed-test status
 
-**Updated:** 2026-11-03. The existing `app.hydronudge` app, Play App Signing enrollment, and Alpha track are confirmed. No bundle has been uploaded and no test release has been submitted.
+**Updated:** 2026-11-11. The existing `app.hydronudge` app, Play App Signing enrollment, and Alpha track are confirmed. No bundle has been uploaded and no test release has been submitted.
 
 ## Current release candidate
 
 - Version: 1.0.0 (versionCode 1); optimized local AAB: `app/build/outputs/bundle/release/app-release.aab`.
-- Current local artifact SHA-256: `7B1305DD3B9E9706D7B57D7B84FE06B151084E01CFCAAC8A744FD3BA947F9DA1`. This AAB is unsigned and cannot be uploaded.
-- Fresh debug build, 32 host tests, and optimized `:app:bundleRelease` succeeded with `--rerun-tasks`; bundletool 1.18.3 validation passed. Package `app.hydronudge`, version 1.0.0/code 1, minSdk 26/targetSdk 37, and permissions were checked. This does not establish owner signing or Play acceptance.
-- Exact output: `qa-reports/closed-test/current-release-validation-20261103.log`.
+- Engineering safeguards completed in code:
+  - **Complete Backup Safety (Schema v2 + v1 compatibility)**: `BackupCodec.encodeFull` / `decodeFull` exports and restores drink history, saved servings, AND full `HydroSettings` preferences (goals, quick-log amounts, units, themes, reminder schedules) with strict validation, restore preview (`BackupCodec.preview`), duplicate ID protection, and atomic Room transaction persistence while remaining backward-compatible with `schemaVersion: 1` backups.
+  - **Reminder & Widget Reliability**: Fixed hardcoded `250/500 mL` filters in `DrinkActionReceiver` and `HydroWidget.WidgetDrinkAction` so custom quick-add amounts work everywhere; added configurable widget quick-log amounts (`widgetQuickAmounts`), 12 widget presets, and non-judgmental missed-reminder feedback (`ReminderPolicy.missedReminderFeedback`) without claiming exact alarm delivery.
+  - **Health & Youth/Caregiver Safeguards**: Added configurable accidental large-volume entry confirmation (`accidentalEntryLimitMl`: 1,000 / 1,500 / 2,000 mL), optional goal guidance without medical claims, and caregiver/youth wellness wording in Settings, DrinkEditor, and `privacy-policy.txt`.
 - Store copy and current genuine screenshots: `release-assets/listing/` and `release-assets/minimal-update/`. Published policy: https://hydronudge-privacy.vercel.app/.
 
-## Owner and policy gates
+## Owner and policy gates (External Play Console actions required before upload)
 
-- The account is Personal. A human support question about health-app eligibility was submitted; its response has not been verified in this update. Do not treat automated guidance as approval or change account type to bypass policy.
-- Intended audience includes children, teenagers, and adults. No age groups have been saved. The existing review found child and adolescent suitability gaps in goals, large/repeated entries, and caregiver guidance. Smallest correction: keep goals optional and caregiver-set without pediatric volume advice, add bounded accidental-entry safeguards, publish the reviewed caregiver privacy wording, then complete a guardian-led suitability check. Do not declare unsupported ages or relabel the audience as adults-only.
-- The actual IARC questionnaire has not been answered or submitted. App content and Data safety declarations remain unsaved.
-- The Play upload certificate and matching owner keystore are not identified. No new key has been created. Never use the debug key or replace Play App Signing.
+- **Personal Account Health Eligibility**: The account is Personal. A human support question about health-app eligibility was submitted; owner must verify Google Play Support's written response before submitting a release.
+- **Target Audience & IARC Questionnaire**: Intended audience includes children, teenagers, and adults, or owner-selected age bands in Play Console. In-app caregiver guidance and accidental-entry confirmation are now implemented in code; owner must complete the IARC content rating questionnaire, Target Audience selection, and Data Safety form in Play Console.
+- **Upload Keystore Signing**: The Play upload certificate and matching owner keystore must be configured via `HYDRO_STORE_FILE` / `HYDRO_KEY_ALIAS` environment variables (see `docs/RELEASE_SIGNING_GUIDE.md`) when producing the final owner-signed upload AAB. Never upload a debug-signed or unsigned release.
 
 ## Test release state
 
@@ -26,4 +26,4 @@ The last authenticated Console inspection (2026-11-02) recorded no uploaded bund
 - Console evidence: `play-submission/CONSOLE_INSPECTION_20261102.md`
 - Declaration review: `play-submission/DECLARATIONS_OWNER_REVIEW.md`
 - Signing guide: `docs/RELEASE_SIGNING_GUIDE.md`
-- Latest release validation evidence: `qa-reports/closed-test/` and `qa-reports/release-preparation/`
+- Backup format specification: `docs/BACKUP_FORMAT.md`

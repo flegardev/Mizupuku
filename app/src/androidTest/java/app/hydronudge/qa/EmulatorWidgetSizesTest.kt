@@ -22,7 +22,7 @@ class EmulatorWidgetSizesTest {
         for((width,height) in listOf(110 to 110,240 to 150,280 to 240)) {
             val intent = Intent(context,WidgetHostActivity::class.java).putExtra("width",width).putExtra("height",height)
             ActivityScenario.launch<WidgetHostActivity>(intent).use {
-                assertTrue("Widget did not render",device.wait(Until.hasObject(By.text(if(width<240) "WATER" else "HydroNudge")),15000))
+                assertTrue("Widget did not render",device.wait(Until.hasObject(By.text(if(width<240) "WATER" else "Mizupuku")),15000))
                 Thread.sleep(500)
                 check(device.takeScreenshot(File(QaArtifacts.folder,"widget-before-$width.png")))
                 if(width>=240) {

@@ -1,0 +1,27 @@
+// Local QA only. Reuse the existing workstation debug key; never create or alter a key.
+// Release signing configuration and repository signing paths remain untouched.
+gradle.beforeProject { p ->
+    p.plugins.withId('com.android.application') {
+        p.tasks.register('kissatenDependencies') {
+            doLast {
+                def configs = ['releaseRuntimeClasspath', 'coreLibraryDesugaring'].collect { p.configurations.findByName(it) }.findAll { it != null && it.canBeResolved }
+                def records = configs.collectMany { it.resolvedConfiguration.resolvedArtifacts }.collect {
+                    [group: it.moduleVersion.id.group, name: it.moduleVersion.id.name, version: it.moduleVersion.id.version]
+                }.unique().sort { a, b -> (a.group + ':' + a.name) <=> (b.group + ':' + b.name) }
+                def output = new File(p.buildDir, 'reports/kissaten-dependencies.json')
+                output.parentFile.mkdirs()
+                output.text = groovy.json.JsonOutput.prettyPrint(groovy.json.JsonOutput.toJson(records))
+            }
+        }
+        p.androidComponents.finalizeDsl { android ->
+            def qaKey = new File(System.getProperty('user.home'), '.android/debug.keystore')
+            if (!qaKey.isFile()) throw new GradleException('Existing workstation debug key required for emulator QA')
+            android.signingConfigs.getByName('debugConfig').storeFile = qaKey
+            // Explicit local artifact validation only; retain the owner's release
+            // signing configuration in source and never manufacture an upload key.
+            if (p.findProperty('kissatenUnsignedRelease') == 'true') {
+                android.buildTypes.getByName('release').signingConfig = null
+            }
+        }
+    }
+}

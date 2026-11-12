@@ -1,0 +1,119 @@
+{
+  "release": {
+    "bundle": "<workspace>\\hydronudge (1)\\app\\build\\outputs\\bundle\\release\\app-release.aab",
+    "sha256": "7422364e4637e979dfad6ec33e809922b605d6b3b7c7473964907acc4353061e",
+    "bytes": 14117026,
+    "signatures": [],
+    "unsigned": true,
+    "nativeLibraries": [
+      {
+        "file": "base/lib/arm64-v8a/libandroidx.graphics.path.so",
+        "elf64": true,
+        "loadSegmentAlignments": [
+          16384,
+          16384,
+          16384
+        ],
+        "aligned16KiB": true
+      },
+      {
+        "file": "base/lib/arm64-v8a/libdatastore_shared_counter.so",
+        "elf64": true,
+        "loadSegmentAlignments": [
+          16384,
+          16384,
+          16384
+        ],
+        "aligned16KiB": true
+      },
+      {
+        "file": "base/lib/armeabi-v7a/libandroidx.graphics.path.so",
+        "elf64": false,
+        "loadSegmentAlignments": [
+          16384,
+          16384,
+          16384
+        ],
+        "aligned16KiB": true
+      },
+      {
+        "file": "base/lib/armeabi-v7a/libdatastore_shared_counter.so",
+        "elf64": false,
+        "loadSegmentAlignments": [
+          16384,
+          16384
+        ],
+        "aligned16KiB": true
+      },
+      {
+        "file": "base/lib/x86/libandroidx.graphics.path.so",
+        "elf64": false,
+        "loadSegmentAlignments": [
+          16384,
+          16384,
+          16384
+        ],
+        "aligned16KiB": true
+      },
+      {
+        "file": "base/lib/x86/libdatastore_shared_counter.so",
+        "elf64": false,
+        "loadSegmentAlignments": [
+          16384,
+          16384
+        ],
+        "aligned16KiB": true
+      },
+      {
+        "file": "base/lib/x86_64/libandroidx.graphics.path.so",
+        "elf64": true,
+        "loadSegmentAlignments": [
+          16384,
+          16384,
+          16384
+        ],
+        "aligned16KiB": true
+      },
+      {
+        "file": "base/lib/x86_64/libdatastore_shared_counter.so",
+        "elf64": true,
+        "loadSegmentAlignments": [
+          16384,
+          16384
+        ],
+        "aligned16KiB": true
+      }
+    ],
+    "bundledLicenseAssets": [
+      "base/assets/third_party/THIRD_PARTY_NOTICES.md",
+      "base/assets/third_party/dependency-inventory.json",
+      "base/assets/third_party/licenses/Apache-2.0.txt",
+      "base/assets/third_party/licenses/artifact-notices/4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726.txt",
+      "base/assets/third_party/licenses/artifact-notices/809fa1ed21450f59827d1e9aec720bbc4b687434fa22283c6cb5dd82a47ab9c0.txt",
+      "base/assets/third_party/licenses/notice-provenance.json"
+    ],
+    "note": "ELF LOAD alignment only; complete installed APK/Play validation is separate. Unsigned bundles are validation artifacts, not upload-ready."
+  },
+  "assets": {
+    "icon-512.png": {
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGB",
+      "bytes": 12304,
+      "validSize": true,
+      "sha256": "65e0d5327225449289aaebbe5fbeb60e9846086341a05e049cfec5d2b6c69e8b"
+    },
+    "feature-1024x500.png": {
+      "size": [
+        1024,
+        500
+      ],
+      "mode": "RGB",
+      "bytes": 19220,
+      "validSize": true,
+      "sha256": "f623dfbfa26450c1a19f6fe54290a82ada524f4024ac017b688accd12ceee949"
+    }
+  }
+}

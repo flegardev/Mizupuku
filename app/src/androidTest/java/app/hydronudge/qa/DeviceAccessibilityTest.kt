@@ -2,7 +2,7 @@ package app.hydronudge.qa
 
 import android.provider.Settings
 import androidx.compose.ui.test.*
-import androidx.compose.ui.test.junit4.v2.createAndroidComposeRule
+import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.uiautomator.UiDevice
@@ -26,7 +26,8 @@ class DeviceAccessibilityTest {
             compose.onNodeWithTag("dashboard-list").performScrollToIndex(0)
             compose.onNodeWithTag("nav:settings").assertIsDisplayed()
             QaArtifacts.screenshot(compose.activity,"08-font-150")
-            compose.onNodeWithTag("choose-drink").performScrollTo().assertIsDisplayed()
+            compose.onNodeWithTag("dashboard-list").performScrollToNode(hasTestTag("choose-drink"))
+            compose.onNodeWithTag("choose-drink").assertIsDisplayed()
             QaArtifacts.note("PASS 150% font scale: dashboard, progress and logging action remain available")
             UiDevice.getInstance(InstrumentationRegistry.getInstrumentation()).pressHome()
             QaArtifacts.shell("am start -W -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000 -n app.hydronudge/.MainActivity")

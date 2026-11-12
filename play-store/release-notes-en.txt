@@ -1,0 +1,5 @@
+Draft for owner review — Mizupuku (provisional)
+• New café-inspired identity, launcher artwork and Japanese-designed fonts.
+• Improved theme consistency and readable accent colors.
+• Existing package identity and local database schema retained.
+• Hydration settings and existing records retained.

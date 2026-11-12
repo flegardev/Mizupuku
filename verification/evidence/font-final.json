@@ -1,0 +1,21 @@
+{
+  "command": [
+    "<workspace>\\hydronudge (1)\\gradlew.bat",
+    "--no-daemon",
+    "--no-configuration-cache",
+    "--console",
+    "plain",
+    "--max-workers=1",
+    "-I",
+    "<workspace>\\kissaten\\tools\\qa.init.gradle",
+    ":app:assembleDebug",
+    ":app:testDebugUnitTest",
+    ":app:lintDebug",
+    ":app:assembleDebugAndroidTest",
+    ":app:bundleRelease"
+  ],
+  "exitCode": 0,
+  "seconds": 248.4,
+  "log": "<workspace>\\kissaten\\evidence\\hydronudge\\font-final.log",
+  "sourceFingerprint": "b41ce791f9703ba0e599f534053930b6119b08dd6a6e345d70221c2932723ab1"
+}

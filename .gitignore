@@ -43,3 +43,16 @@ qa-reports/*/host-test-results/binary/
 # Local QA evidence may contain device metadata.
 qa-reports/
 work/
+
+# Keep build outputs and local signing credentials private.
+!.env.example
+
+# Workstation-only build, IDE and review output
+.idea/
+*.apk
+*.aab
+*-owner-review-*.zip
+qa-reports/
+work/
+verification/private-runtime/
+__pycache__/

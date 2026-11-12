@@ -1,7 +1,7 @@
 package app.hydronudge
 
 import androidx.compose.ui.test.*
-import androidx.compose.ui.test.junit4.v2.createAndroidComposeRule
+import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.graphics.asAndroidBitmap
 import app.hydronudge.data.preferences.HydroSettings
 import kotlinx.coroutines.runBlocking
@@ -21,7 +21,11 @@ class AppFlowTest {
     @get:Rule val compose=createAndroidComposeRule<MainActivity>()
     private fun screenshot(name: String) {
         val folder=File("build/screenshots").apply {mkdirs()}
-        File(folder,"$name.png").outputStream().use { compose.onRoot().captureToImage().asAndroidBitmap().compress(android.graphics.Bitmap.CompressFormat.PNG,100,it) }
+        val view = compose.activity.window.decorView
+        val bitmap = android.graphics.Bitmap.createBitmap(view.width.coerceAtLeast(1), view.height.coerceAtLeast(1), android.graphics.Bitmap.Config.ARGB_8888).also {
+            view.draw(android.graphics.Canvas(it))
+        }
+        File(folder,"$name.png").outputStream().use { bitmap.compress(android.graphics.Bitmap.CompressFormat.PNG,100,it) }
     }
     @Test fun launchLogWaterCustomAmountAndSwitchToDarkTheme() {
         val app=compose.activity.application as HydroApplication

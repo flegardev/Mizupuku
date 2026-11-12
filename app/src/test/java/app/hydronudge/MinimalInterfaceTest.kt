@@ -2,7 +2,7 @@ package app.hydronudge
 
 import androidx.compose.runtime.*
 import androidx.compose.ui.test.*
-import androidx.compose.ui.test.junit4.v2.createComposeRule
+import androidx.compose.ui.test.junit4.createComposeRule
 import app.hydronudge.data.local.DrinkEntry
 import app.hydronudge.data.preferences.HydroSettings
 import app.hydronudge.ui.HydroState

@@ -1,0 +1,13 @@
+# Google Play preparation — checked 11 November 2026
+
+These are source-backed preparation notes, not a claim about the owner's current Play Console state.
+
+- [Target API requirements](https://developer.android.com/google/play/requirements/target-sdk): new phone apps and updates must target API 36 or higher. All three retain targetSdk 36; compileSdk is 37 using the installed SDK. Store eligibility also requires device/runtime and SDK behavior testing.
+- [Preview assets](https://support.google.com/googleplay/android-developer/answer/9866151): icon 512×512 PNG; feature graphic 1024×500 JPEG or 24-bit PNG without alpha. Phone screenshots must accurately show the application; minimum two, 320–3840 pixels, longest side at most twice the shortest. This project aims to provide at least five genuine captures per app. Use the explicitly selected 1080×1920 captures, not the tall 1080×2424 QA captures, for the phone listing.
+- [New personal account testing](https://support.google.com/googleplay/android-developer/answer/14151465): affected accounts need at least 12 opted-in testers continuously for 14 days, then an application for production access. No tester enrollment, duration, feedback, or access has been verified here.
+- [Health content and services](https://support.google.com/googleplay/android-developer/answer/16679511): Mizupuku's hydration features require a truthful health-app declaration, appropriate privacy policy and accurate non-medical positioning. Complete intended audience, age ratings and Data safety from observed behavior; none is preselected by this work.
+- [Developer account type](https://support.google.com/googleplay/android-developer/answer/13634885): the published guidance describes organization requirements for health apps such as medical/human-subjects research apps. The owner's existing HydroNudge eligibility/support question remains an owner/Google decision. Do not infer that renaming resolves it, fabricate a support response, or reset the account.
+- Signing: obtain and verify the existing owner upload identity and published app signing certificate. No key was created or replaced. Debug builds use the existing local workstation key only through the QA init script; this does not verify production upgrade compatibility.
+- Native 16 KiB page-size compatibility and the complete resolved dependency vulnerability/license review remain release checks; do not infer compliance from a green Kotlin compilation.
+
+No releases, privacy websites or store listings have been published by this work. Support address, legal owner name, privacy URL ownership, actual testing evidence and final branding approval must be supplied/verified before submission.
