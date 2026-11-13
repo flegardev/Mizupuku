@@ -1,0 +1,47 @@
+[
+  {
+    "file": "play-store/feature-1024x500.png",
+    "bytes": 19220,
+    "sha256": "f623dfbfa26450c1a19f6fe54290a82ada524f4024ac017b688accd12ceee949"
+  },
+  {
+    "file": "play-store/icon-512.png",
+    "bytes": 12304,
+    "sha256": "65e0d5327225449289aaebbe5fbeb60e9846086341a05e049cfec5d2b6c69e8b"
+  },
+  {
+    "file": "play-store/screenshots/phone/01-light-home.png",
+    "bytes": 246104,
+    "sha256": "a8696b67f8a23f0a2691e16a80800f463058dcda2d2690cff88299395ed999d2"
+  },
+  {
+    "file": "play-store/screenshots/phone/02-history.png",
+    "bytes": 251558,
+    "sha256": "fa11a93d72f62060d18e82a0b70ded25001bc936fc5835341cfea9d92a796139"
+  },
+  {
+    "file": "play-store/screenshots/phone/03-settings.png",
+    "bytes": 268480,
+    "sha256": "1dffbc7e8c791ca82f31b85ced1afb1972c9c43b72b3f62054ca1ab2b5bbb75b"
+  },
+  {
+    "file": "play-store/screenshots/phone/04-custom-entry.png",
+    "bytes": 121013,
+    "sha256": "a01b209855666534a2c5566cbd19a360d6e7557dfe022a4880df4e81780e469c"
+  },
+  {
+    "file": "play-store/screenshots/phone/05-theme-studio.png",
+    "bytes": 174674,
+    "sha256": "187b57de98fc22a240a71fa5bd3df1f68965298c11632b360586741edf233f74"
+  },
+  {
+    "file": "play-store/screenshots/phone/06-dark-home.png",
+    "bytes": 255683,
+    "sha256": "578cea2ee7eaba78b277f378f00fe5912a59e36ab696f41440898156d0e53854"
+  },
+  {
+    "file": "play-store/screenshots/phone/07-oled-home.png",
+    "bytes": 258512,
+    "sha256": "f1bbed577452bc4c9b3efa7ead3e346190d275fdc1f0819a19b68be8a6b3c2cd"
+  }
+]

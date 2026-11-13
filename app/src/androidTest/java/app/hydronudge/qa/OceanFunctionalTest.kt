@@ -193,8 +193,10 @@ open class OceanFunctionalTest : OceanFixture() {
         } finally {QaArtifacts.shell(if(clockSetting=="null") "settings delete system time_12_24" else "settings put system time_12_24 $clockSetting")}
     }
     @Test fun ongoingNotificationBothActionsDeduplicate() {
-        val automation=InstrumentationRegistry.getInstrumentation().uiAutomation
-        automation.grantRuntimePermission(app.packageName,Manifest.permission.POST_NOTIFICATIONS)
+        if(Build.VERSION.SDK_INT>=33) {
+            InstrumentationRegistry.getInstrumentation().uiAutomation
+                .grantRuntimePermission(app.packageName,Manifest.permission.POST_NOTIFICATIONS)
+        }
         prefs(HydroSettings(statusNotification=true,theme=ThemeMode.DARK))
         runBlocking {app.refreshSurfaces()}
         val manager=app.getSystemService(NotificationManager::class.java)

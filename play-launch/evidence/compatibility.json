@@ -1,0 +1,33 @@
+{
+  "applicationId": {
+    "before": "app.hydronudge",
+    "after": "app.hydronudge",
+    "preserved": true
+  },
+  "namespace": {
+    "before": "app.hydronudge",
+    "after": "app.hydronudge",
+    "preserved": true
+  },
+  "preferenceKeys": {
+    "removed": [],
+    "added": [],
+    "preserved": true
+  },
+  "actionStrings": {
+    "before": {},
+    "after": {},
+    "preserved": true
+  },
+  "roomSchemas": [
+    {
+      "file": "app/schemas/app.hydronudge.data.local.HydroDatabase/1.json",
+      "version": 1,
+      "identityHash": "6d2a6bf2d81f17a2f411a2fbae918876",
+      "unchanged": true,
+      "baselineExportPresent": true,
+      "verification": "JSON equality"
+    }
+  ],
+  "signingSourceUnchanged": true
+}

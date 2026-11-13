@@ -53,7 +53,7 @@ class HydroNotifications(private val context: Context) {
     private fun drinkActionIntent(ml: Int, dismissReminder: Boolean = false): PendingIntent {
         val token = UUID.randomUUID().toString()
         val intent = Intent(context, DrinkActionReceiver::class.java)
-            .setAction("app.hydronudge.ADD")
+            .setAction("com.tiniflegar.mizupuku.ADD")
             .setData("hydronudge://drink/$token".toUri())
             .putExtra("token", token)
             .putExtra("ml", ml)
@@ -79,13 +79,13 @@ class HydroNotifications(private val context: Context) {
         val snoozeIntent = PendingIntent.getBroadcast(
             context,
             101,
-            Intent(context, DrinkActionReceiver::class.java).setAction("app.hydronudge.SNOOZE_REMINDER"),
+            Intent(context, DrinkActionReceiver::class.java).setAction("com.tiniflegar.mizupuku.SNOOZE_REMINDER"),
             PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
         )
         val skipIntent = PendingIntent.getBroadcast(
             context,
             102,
-            Intent(context, DrinkActionReceiver::class.java).setAction("app.hydronudge.SKIP_REMINDER"),
+            Intent(context, DrinkActionReceiver::class.java).setAction("com.tiniflegar.mizupuku.SKIP_REMINDER"),
             PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
         )
         try {
@@ -157,7 +157,7 @@ class HydroNotifications(private val context: Context) {
                 PendingIntent.getBroadcast(
                     context,
                     99,
-                    Intent(context, DrinkActionReceiver::class.java).setAction("app.hydronudge.DISMISS_STATUS"),
+                    Intent(context, DrinkActionReceiver::class.java).setAction("com.tiniflegar.mizupuku.DISMISS_STATUS"),
                     PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
                 )
             )

@@ -1,0 +1,20 @@
+{
+  "command": [
+    "adb",
+    "-s",
+    "emulator-5554",
+    "shell",
+    "am",
+    "instrument",
+    "-w",
+    "-r",
+    "-e",
+    "class",
+    "app.hydronudge.qa.OceanFunctionalTest,app.hydronudge.qa.QuickAmountValidationTest,app.hydronudge.qa.DeviceAccessibilityTest,app.hydronudge.qa.EmulatorBackupFlowTest,app.hydronudge.qa.EmulatorWidgetTest,app.hydronudge.qa.ReminderDeliveryTest",
+    "app.hydronudge.test/androidx.test.runner.AndroidJUnitRunner"
+  ],
+  "exitCode": 0,
+  "passed": true,
+  "notificationPermissionBefore": "denied",
+  "notificationPermissionAfter": "denied"
+}

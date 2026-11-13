@@ -56,3 +56,8 @@ qa-reports/
 work/
 verification/private-runtime/
 __pycache__/
+
+# Private launch output
+play-launch/artifacts/
+play-launch/private/
+play-launch/evidence/raw/

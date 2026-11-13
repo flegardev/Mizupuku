@@ -30,7 +30,7 @@ class DeviceAccessibilityTest {
             compose.onNodeWithTag("choose-drink").assertIsDisplayed()
             QaArtifacts.note("PASS 150% font scale: dashboard, progress and logging action remain available")
             UiDevice.getInstance(InstrumentationRegistry.getInstrumentation()).pressHome()
-            QaArtifacts.shell("am start -W -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000 -n app.hydronudge/.MainActivity")
+            QaArtifacts.shell("am start -W -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000 -n com.tiniflegar.mizupuku/app.hydronudge.MainActivity")
             compose.waitUntil(20000) {compose.activityRule.scenario.state==androidx.lifecycle.Lifecycle.State.RESUMED}
             compose.onNodeWithTag("dashboard-list").assertExists()
             QaArtifacts.note("PASS background-to-foreground transition")
