@@ -1,0 +1,54 @@
+# Mizupuku privacy policy
+
+Mizupuku Privacy Policy
+Previously HydroNudge; the Android package remains app.hydronudge.
+
+Publisher: Tini Flegar
+Support and privacy contact: tini.flegar@gmail.com
+Effective date: 13 November 2026
+Public policy page: https://hydronudge-privacy.vercel.app/
+
+## What Mizupuku does
+
+Mizupuku is an offline water journal. You enter water amounts yourself and can view progress, history and statistics, set a daily goal, and enable reminders, notifications, widgets and a Quick Settings tile. It does not measure your body's hydration or provide medical advice.
+
+Mizupuku is not a medical device and does not diagnose, treat, cure, or prevent any medical condition. Consult a healthcare professional for medical advice, diagnosis or treatment, including individual fluid needs or restrictions.
+
+Daily goals are optional and are not individualized recommendations. Mizupuku does not calculate hydration needs. For a child, a parent or caregiver should choose any goal with appropriate professional guidance. Reminders are optional check-ins; they do not assess need or require a drink or a log.
+
+## Information stored on your device
+
+Mizupuku stores your recorded water amounts, dates and times, optional notes, entry identifiers and input units in its private local database. It stores settings such as goals, units, appearance, quick-add amounts and reminder and notification preferences locally. These records and settings support the features you choose to use. Data from older versions, including non-water records and saved servings, may remain in the database and in manual backups. Only records identified as water count toward current water totals.
+
+The app has no user accounts, advertising, purchases, subscriptions or third-party analytics. It has no application-owned cloud database or synchronization service. Mizupuku does not request Internet access and does not itself transmit your records or settings to the publisher or a server. Android and any other applications or services you choose to use operate under their own privacy policies.
+
+## Manual export and import
+
+Export full backup writes an unencrypted JSON file (Schema v2) to a location you select through Android's document picker. Optional CSV export writes an unencrypted CSV spreadsheet of your recorded entries to a location you select. Schema v2 full backups contain all recorded entries (including notes and preserved legacy records), saved servings, and your app preferences (daily goals, units, quick-add amounts, appearance, and reminder schedules). Legacy Schema v1 backups containing only drink entries and saved servings remain supported on import, and for legacy v1 backups without settings, preferences stay on this device. Import reads a file you select, validates all fields, and merges new identifiers while keeping existing records with matching identifiers. Unsupported or invalid backups are rejected; the import limit is 32 MiB.
+
+The selected document provider may be another app, shared storage, or a cloud provider. By choosing it, you direct Mizupuku to pass the backup to that provider, which may store or transmit it under its own terms. This is a user-initiated transfer, not automatic synchronization by Mizupuku. Protect your exported files and avoid sharing notes you wish to keep private. Exported copies are outside Mizupuku's private storage and are not deleted when local app data is deleted.
+
+## Notifications and Android integration
+
+Notifications are optional. On Android 13 and later, Mizupuku requests notification permission when you enable a notification feature. You can decline permission and continue recording water. Disable notifications in the app or Android settings. Reminder sound and vibration depend on your settings and Android notification channels. Android may delay background reminders; exact delivery times are not guaranteed.
+
+Notifications and widgets can display water totals and actions outside the main app. Notification details may be visible on your lock screen depending on Android settings. Choose device and lock-screen settings appropriate for your privacy needs. AndroidX background-work support uses wake, restart and network-state permissions for scheduling and system integration; network-state access does not permit Internet access. The app does not request location, contacts, microphone, camera, broad file-storage access, exact alarms or Health Connect data.
+
+## Retention, deletion and device changes
+
+Records remain in local app storage until you delete them or Android removes the app's data. You can edit or delete individual visible water entries. Settings > Data and privacy > Delete all local data removes water and preserved legacy records and saved servings, resets preferences and turns off reminders after confirmation. Android's app-storage controls can also erase local app data. Uninstalling normally removes private app data. These actions do not delete exported files or copies held by a document provider; delete those separately.
+
+Automatic Android cloud backup is disabled. Backup rules also exclude app data from supported Android device-transfer mechanisms. Device manufacturers and Android versions can differ, so automatic recovery or transfer is not guaranteed. Do not rely on a device transfer, reinstall or replacement to restore your records. Export a backup before changing devices if you want to keep records and settings, and keep it secure. Legacy v1 backups do not contain preferences, whereas Schema v2 full backups restore both records and preferences. The publisher cannot recover local records or lost exported files.
+
+## Security, support and changes
+
+Records use Android's app-private storage. Mizupuku does not add its own database or backup encryption; device encryption and access protection depend on your device. No absolute security guarantee is made. If you contact the publisher using the support details above, provide only information needed for your request; do not send your journal unless you choose to. If you email tini.flegar@gmail.com, the publisher receives your email address and the message and attachments you choose to send. This information is used to answer your request and troubleshoot reported issues, and is handled through Gmail under Google's privacy practices. Correspondence is retained for as long as needed to handle the request and any necessary follow-up or legal obligations. You can request deletion by email; applicable legal obligations and the email provider's retention processes may affect deletion. Do not send medical information or a complete journal backup for routine support.
+
+The public privacy page is hosted on Vercel. Loading the page sends ordinary web-request information, such as your IP address, browser information and request time, to the hosting provider for delivery and security. The page adds no analytics, tracking scripts, forms or external fonts. Hosting-provider processing is separate from the offline Android app. See https://vercel.com/legal/privacy-policy for Vercel's privacy practices.
+
+Policy updates will appear on the public policy page with an updated effective date. Material changes to the app's data handling must also be reflected in the app and its Google Play disclosures. Contact the publisher above for privacy questions.
+
+
+
+
+Public page deployment status is recorded in RELEASE_READINESS.md. The previous product policy remains separate until the new policy deployment is verified.

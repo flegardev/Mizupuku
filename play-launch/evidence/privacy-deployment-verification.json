@@ -1,0 +1,43 @@
+{
+  "deploymentId": "dpl_BsMSHGePjLNHVBETxwyi28GUnTSw",
+  "project": "hydronudge-privacy",
+  "target": "production",
+  "checked": "2026-11-13",
+  "results": [
+    {
+      "url": "https://hydronudge-privacy.vercel.app/",
+      "status": 200,
+      "bytes": 8286,
+      "sha256": "e793267cdbbe1055643ba9201c967ca26236cd3db50d39f0ed5779e6bf2a8213",
+      "matchesPreparedBytes": true
+    },
+    {
+      "url": "https://hydronudge-privacy.vercel.app/hydronudge-mark.svg",
+      "status": 200,
+      "bytes": 463,
+      "sha256": "fc0820e28ca62f19268c1ec110e0456ee55ad488ef00d9bab4f1d43271f0db44",
+      "matchesPreparedBytes": true
+    },
+    {
+      "url": "https://hydronudge-privacy.vercel.app/mizupuku/",
+      "status": 200,
+      "bytes": 9317,
+      "sha256": "1157264cbd0591c987f8eda14c0754a023d91a1ffb73f35f0c767f11b65be3e5",
+      "matchesPreparedBytes": true
+    },
+    {
+      "url": "https://hydronudge-privacy.vercel.app/fumipoka/",
+      "status": 200,
+      "bytes": 5711,
+      "sha256": "7143ab85267fc589c68bde69f6554e4540dff32ae5250e9b0cb1ee0bc2a530dd",
+      "matchesPreparedBytes": true
+    },
+    {
+      "url": "https://hydronudge-privacy.vercel.app/yorulune/",
+      "status": 200,
+      "bytes": 5737,
+      "sha256": "6b5942a893739a84f717a4cb78db0c095fb3cf7332f12dec401ccda7c8524234",
+      "matchesPreparedBytes": true
+    }
+  ]
+}

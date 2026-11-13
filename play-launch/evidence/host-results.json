@@ -1,0 +1,151 @@
+{
+  "date": "2026-11-13",
+  "tests": 43,
+  "failures": 0,
+  "lint": {
+    "debug": {
+      "available": true,
+      "errors": 0,
+      "warnings": 29
+    },
+    "release": {
+      "available": true,
+      "errors": 0,
+      "warnings": 29
+    }
+  },
+  "suites": [
+    {
+      "name": "app.hydronudge.AppFlowTest",
+      "tests": "1",
+      "skipped": "0",
+      "failures": "0",
+      "errors": "0",
+      "timestamp": "2026-11-13T07:25:30.824Z",
+      "hostname": "TINC",
+      "time": "16.737"
+    },
+    {
+      "name": "app.hydronudge.BackupTest",
+      "tests": "6",
+      "skipped": "0",
+      "failures": "0",
+      "errors": "0",
+      "timestamp": "2026-11-13T07:25:47.566Z",
+      "hostname": "TINC",
+      "time": "6.356"
+    },
+    {
+      "name": "app.hydronudge.DailyTotalTest",
+      "tests": "2",
+      "skipped": "0",
+      "failures": "0",
+      "errors": "0",
+      "timestamp": "2026-11-13T07:25:53.929Z",
+      "hostname": "TINC",
+      "time": "0.051"
+    },
+    {
+      "name": "app.hydronudge.HistoryReportTest",
+      "tests": "1",
+      "skipped": "0",
+      "failures": "0",
+      "errors": "0",
+      "timestamp": "2026-11-13T07:25:53.984Z",
+      "hostname": "TINC",
+      "time": "0.011"
+    },
+    {
+      "name": "app.hydronudge.HydrationTest",
+      "tests": "8",
+      "skipped": "0",
+      "failures": "0",
+      "errors": "0",
+      "timestamp": "2026-11-13T07:25:53.998Z",
+      "hostname": "TINC",
+      "time": "0.004"
+    },
+    {
+      "name": "app.hydronudge.HydroNudge2FeaturesTest",
+      "tests": "9",
+      "skipped": "0",
+      "failures": "0",
+      "errors": "0",
+      "timestamp": "2026-11-13T07:25:54.008Z",
+      "hostname": "TINC",
+      "time": "0.249"
+    },
+    {
+      "name": "app.hydronudge.KissatenContrastTest",
+      "tests": "1",
+      "skipped": "0",
+      "failures": "0",
+      "errors": "0",
+      "timestamp": "2026-11-13T07:25:54.259Z",
+      "hostname": "TINC",
+      "time": "0.076"
+    },
+    {
+      "name": "app.hydronudge.LocalStorageTest",
+      "tests": "3",
+      "skipped": "0",
+      "failures": "0",
+      "errors": "0",
+      "timestamp": "2026-11-13T07:25:54.338Z",
+      "hostname": "TINC",
+      "time": "0.416"
+    },
+    {
+      "name": "app.hydronudge.MinimalInterfaceTest",
+      "tests": "2",
+      "skipped": "0",
+      "failures": "0",
+      "errors": "0",
+      "timestamp": "2026-11-13T07:25:54.768Z",
+      "hostname": "TINC",
+      "time": "1.135"
+    },
+    {
+      "name": "app.hydronudge.QuickAmountsTest",
+      "tests": "4",
+      "skipped": "0",
+      "failures": "0",
+      "errors": "0",
+      "timestamp": "2026-11-13T07:25:55.923Z",
+      "hostname": "TINC",
+      "time": "0.001"
+    },
+    {
+      "name": "app.hydronudge.ReleaseStorageStressTest",
+      "tests": "1",
+      "skipped": "0",
+      "failures": "0",
+      "errors": "0",
+      "timestamp": "2026-11-13T07:25:55.937Z",
+      "hostname": "TINC",
+      "time": "1.327"
+    },
+    {
+      "name": "app.hydronudge.ReminderPolicyTest",
+      "tests": "4",
+      "skipped": "0",
+      "failures": "0",
+      "errors": "0",
+      "timestamp": "2026-11-13T07:25:57.284Z",
+      "hostname": "TINC",
+      "time": "0.003"
+    },
+    {
+      "name": "app.hydronudge.SchedulerTest",
+      "tests": "1",
+      "skipped": "0",
+      "failures": "0",
+      "errors": "0",
+      "timestamp": "2026-11-13T07:25:57.293Z",
+      "hostname": "TINC",
+      "time": "0.549"
+    }
+  ],
+  "cleanBuildExitCode": 0,
+  "finalBuildExitCode": 0
+}
