@@ -17,7 +17,15 @@
     "path": "C:\\Users\\tinif\\Downloads\\hi\\hydronudge (1)\\app\\build\\outputs\\bundle\\release\\app-release.aab",
     "sha256": "0AA8D586730F285437E738BFEC05761119AF9CB0ACE057DDD9C2086FBAFB373A",
     "signed": false,
-    "uploadable": false
+    "uploadable": false,
+    "manifestPermissions": [
+      "android.permission.POST_NOTIFICATIONS",
+      "android.permission.VIBRATE",
+      "android.permission.WAKE_LOCK",
+      "android.permission.ACCESS_NETWORK_STATE",
+      "android.permission.RECEIVE_BOOT_COMPLETED",
+      "com.tiniflegar.mizupuku.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    ]
   },
   "buildTasks": "assembleDebug, testDebugUnitTest, lintDebug, bundleRelease, assembleDebugAndroidTest",
   "playConsole": "Package name availability checked; app entry not created because required policy and export-law certifications await owner approval.",
