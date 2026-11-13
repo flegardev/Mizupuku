@@ -21,5 +21,12 @@
   },
   "buildTasks": "assembleDebug, testDebugUnitTest, lintDebug, bundleRelease, assembleDebugAndroidTest",
   "playConsole": "Package name availability checked; app entry not created because required policy and export-law certifications await owner approval.",
-  "privacyPolicy": "Published URL is live; its package reference remains stale pending owner approval and publication."
+  "privacyPolicy": "Published URL is live; its package reference remains stale pending owner approval and publication.",
+  "minimumApiDeviceValidation": {
+    "api": "API 26",
+    "device": "Dedicated QA emulator",
+    "package": "com.tiniflegar.mizupuku",
+    "result": "11 passed, 1 failed (launcher widget pin confirmation did not create an observed AppWidget ID).",
+    "details": "API 26 emulator emulator-5558; 11/12 migration instrumentation checks passed after making notification permission granting conditional for API 33+. Backup and reminder flows passed; accessibility passed. Launcher widget pin flow timed out while waiting for a new widget ID. API 37 widget flow passed."
+  }
 }
