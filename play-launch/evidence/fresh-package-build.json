@@ -28,5 +28,11 @@
     "package": "com.tiniflegar.mizupuku",
     "result": "11 passed, 1 failed (launcher widget pin confirmation did not create an observed AppWidget ID).",
     "details": "API 26 emulator emulator-5558; 11/12 migration instrumentation checks passed after making notification permission granting conditional for API 33+. Backup and reminder flows passed; accessibility passed. Launcher widget pin flow timed out while waiting for a new widget ID. API 37 widget flow passed."
+  },
+  "processDeathSmoke": {
+    "api": 26,
+    "result": "PASS",
+    "method": "adb force-stop followed by launcher relaunch; resumed activity verified",
+    "scope": "Debug build, no data wipe."
   }
 }
