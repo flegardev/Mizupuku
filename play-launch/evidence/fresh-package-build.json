@@ -27,7 +27,8 @@
     "device": "Dedicated QA emulator",
     "package": "com.tiniflegar.mizupuku",
     "result": "11 passed, 1 failed (launcher widget pin confirmation did not create an observed AppWidget ID).",
-    "details": "API 26 emulator emulator-5558; 11/12 migration instrumentation checks passed after making notification permission granting conditional for API 33+. Backup and reminder flows passed; accessibility passed. Launcher widget pin flow timed out while waiting for a new widget ID. API 37 widget flow passed."
+    "details": "API 26 emulator emulator-5558; 11/12 migration instrumentation checks passed after making notification permission granting conditional for API 33+. Backup and reminder flows passed; accessibility passed. Launcher widget pin flow timed out while waiting for a new widget ID. API 37 widget flow passed. PASS: added the new-package widget from the API 26 launcher widget picker, confirmed its RemoteViews/home rendering, then removed only that test-created widget instance. Manual widget placement: passed in launcher picker; rendered on home; only test-created instance was removed.",
+    "manualWidgetPlacement": "PASS: new-package widget added from launcher picker, rendered on the home screen, then the test-created instance was removed."
   },
   "processDeathSmoke": {
     "api": 26,
