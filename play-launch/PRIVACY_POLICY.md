@@ -1,7 +1,7 @@
 # Mizupuku privacy policy
 
 Mizupuku Privacy Policy
-Previously HydroNudge; the Android package remains app.hydronudge.
+Previously HydroNudge; the Android package remains com.tiniflegar.mizupuku.
 
 Publisher: Tini Flegar
 Support and privacy contact: tini.flegar@gmail.com

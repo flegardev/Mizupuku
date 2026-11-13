@@ -2,7 +2,7 @@
 
 13 November 2026.
 
-**WAITING FOR REQUIRED TESTING / identity and signing gates.** No tester identities, opt-ins, elapsed participation or feedback invented. Deleted `com.tiniflegar.returnmark` is a different package and supplies no test credit to `app.hydronudge`.
+**WAITING FOR REQUIRED TESTING / identity and signing gates.** No tester identities, opt-ins, elapsed participation or feedback invented. Deleted `com.tiniflegar.returnmark` is a different package and supplies no test credit to `com.tiniflegar.mizupuku`.
 
 For applicable new Personal accounts: at least **12 consenting testers continuously opted in for the preceding 14 days**, followed by the production-access application. [Official requirement](https://support.google.com/googleplay/android-developer/answer/14151465). Inspect package-specific progress in the actual Console.
 

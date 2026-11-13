@@ -2,7 +2,7 @@
 
 13 November 2026.
 
-**DRAFTS — NOT SAVED OR SUBMITTED.** Package `app.hydronudge`. Owner approval is required for legally significant declarations. Inspect the actual form; do not fill absent conditional questions by assumption.
+**DRAFTS — NOT SAVED OR SUBMITTED.** Proposed package `com.tiniflegar.mizupuku`. Play Console reported this ID available; app creation is pending the required owner certifications. Owner approval is required for legally significant declarations. Inspect the actual form; do not fill absent conditional questions by assumption.
 
 | Section | Evidence-backed proposal / required decision |
 |---|---|
