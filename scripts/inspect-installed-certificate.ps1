@@ -6,7 +6,7 @@ if ((& $adb -s $Serial get-state 2>$null) -ne 'device') { throw 'Selected serial
 $manufacturer = & $adb -s $Serial shell getprop ro.product.manufacturer
 $model = & $adb -s $Serial shell getprop ro.product.model
 Write-Host "Selected device: $manufacturer $model"
-$paths = @(& $adb -s $Serial shell pm path app.hydronudge)
+$paths = @(& $adb -s $Serial shell pm path com.tiniflegar.mizupuku)
 $base = $paths | Where-Object { $_ -match '/base.apk\s*$' } | Select-Object -First 1
 if (-not $base) { throw 'HydroNudge base APK not found. No device changes made.' }
 $remote = ($base -replace '^package:', '').Trim()

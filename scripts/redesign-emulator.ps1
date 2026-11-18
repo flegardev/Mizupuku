@@ -17,7 +17,7 @@ if (-not $SkipBuild) { Invoke-HydroGradle -GradleArgs @('assembleDebug', 'assemb
 if ($LASTEXITCODE -ne 0) { throw 'App update failed.' }
 & $adb -s $Serial install -r (Join-Path $script:ProjectRoot 'app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk')
 if ($LASTEXITCODE -ne 0) { throw 'Test APK update failed.' }
-$result = & $adb -s $Serial shell am instrument --user 0 -w -r -e disableAnalytics true -e class $TestClasses app.hydronudge.test/androidx.test.runner.AndroidJUnitRunner
+$result = & $adb -s $Serial shell am instrument --user 0 -w -r -e disableAnalytics true -e class $TestClasses com.tiniflegar.mizupuku.test/androidx.test.runner.AndroidJUnitRunner
 $result | Write-Output
 if ($LASTEXITCODE -ne 0 -or ($result -join "`n") -notmatch 'OK \(\d+ tests?\)' -or ($result -join "`n") -match 'FAILURES!!!|INSTRUMENTATION_FAILED') {
     throw 'Instrumentation did not report a passing result. Inspect the retained runner output.'

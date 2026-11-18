@@ -1,0 +1,46 @@
+[
+  {
+    "app": "Mizupuku",
+    "build": "launch-clean-20261113",
+    "hostTests": 43,
+    "lintErrors": 0,
+    "apis": [
+      26,
+      35
+    ],
+    "pageSize35": 16384,
+    "storeScreenshots": 7,
+    "validation": "PASS",
+    "production": "BLOCKED"
+  },
+  {
+    "app": "Fumipoka",
+    "build": "launch-contrast-final",
+    "hostTests": 19,
+    "lintErrors": 0,
+    "apis": [
+      24,
+      26,
+      35
+    ],
+    "pageSize35": 16384,
+    "storeScreenshots": 7,
+    "validation": "PASS",
+    "production": "BLOCKED"
+  },
+  {
+    "app": "Yorulune",
+    "build": "launch-contrast-final",
+    "hostTests": 35,
+    "lintErrors": 0,
+    "apis": [
+      24,
+      26,
+      35
+    ],
+    "pageSize35": 16384,
+    "storeScreenshots": 7,
+    "validation": "PASS",
+    "production": "BLOCKED"
+  }
+]

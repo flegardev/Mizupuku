@@ -1,0 +1,41 @@
+[
+  {
+    "api": 26,
+    "serial": "emulator-5556",
+    "avd": "Kissaten_Launch_API26",
+    "pageSize": 4096,
+    "releaseBundleDerived": true,
+    "qaCertificateOnly": true,
+    "passed": true,
+    "routes": [
+      "Today",
+      "History",
+      "Settings"
+    ],
+    "fontScale": 1.5,
+    "offlineRestart": true,
+    "note": "Actual release-bundle-derived universal APK, signed only with the existing QA debug key. UI navigation, large-font home and offline restart; no physical-device or exhaustive background/accessibility claim.",
+    "qaApkSha256": "08e55e5c02940269cfe81f7dea528bda36f34a93ad2a877c69e377c2f8c5c910",
+    "sourceAabSha256": "30b6fe1aa6d7ab2d9ae4aeb30db4c39175ab97fc649b8444a35984e6c24ba91b",
+    "hashBinding": "Recorded after the completed API 26 run; unchanged initial bundle-derived APK retained and verified. No Mizupuku rebuild or replacement occurred between run and binding."
+  },
+  {
+    "qaApkSha256": "08e55e5c02940269cfe81f7dea528bda36f34a93ad2a877c69e377c2f8c5c910",
+    "sourceAabSha256": "30b6fe1aa6d7ab2d9ae4aeb30db4c39175ab97fc649b8444a35984e6c24ba91b",
+    "api": 35,
+    "serial": "emulator-5560",
+    "avd": "Kissaten_Launch_API35",
+    "pageSize": 16384,
+    "releaseBundleDerived": true,
+    "qaCertificateOnly": true,
+    "passed": true,
+    "routes": [
+      "Today",
+      "History",
+      "Settings"
+    ],
+    "fontScale": 1.5,
+    "offlineRestart": true,
+    "note": "Actual release-bundle-derived universal APK, signed only with the existing QA debug key. UI navigation, large-font home and offline restart; no physical-device or exhaustive background/accessibility claim."
+  }
+]

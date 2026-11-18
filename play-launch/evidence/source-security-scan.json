@@ -1,0 +1,14 @@
+{
+  "scope": "Text-pattern scan of source/configuration; no raw secrets emitted; not a full security certification",
+  "checks": [
+    "Private key",
+    "GitHub token",
+    "AWS access key",
+    "Google API key",
+    "Destructive migration",
+    "Mutable pending intent",
+    "Unbounded document read",
+    "Runtime network client"
+  ],
+  "findings": []
+}

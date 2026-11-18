@@ -1,0 +1,6 @@
+{
+  "queried": "2026-11-13",
+  "count": 92,
+  "findings": [],
+  "scope": "OSV Maven coordinates from the unchanged resolved runtime dependency inventory; limited database coverage, not a security certification."
+}

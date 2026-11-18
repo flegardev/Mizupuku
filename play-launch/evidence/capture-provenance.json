@@ -1,0 +1,26 @@
+[
+  {
+    "file": "api26-home.png",
+    "source": "kissaten/evidence/hydronudge/screenshots/launch-api26/home.png",
+    "sha256": "64cb0a20a7952cb7b7f93c303f2379e20a9f04f46c9ca345bc6a98b2c19a513f",
+    "note": "Actual bundle-derived QA-only release APK on a new explicitly gated AVD; fictional/empty test records. No editing."
+  },
+  {
+    "file": "api26-font150.png",
+    "source": "kissaten/evidence/hydronudge/screenshots/launch-api26/font150.png",
+    "sha256": "4ff4d75ab6667de65483289eeab14c873917445ecd6b8e315f5ba722a8839a68",
+    "note": "Actual bundle-derived QA-only release APK on a new explicitly gated AVD; fictional/empty test records. No editing."
+  },
+  {
+    "file": "api35-home.png",
+    "source": "kissaten/evidence/hydronudge/screenshots/launch-api35/home.png",
+    "sha256": "506e7ef1e4eec9e624d54c2ae0d8e067bb132e01473be2863300bf29be86437d",
+    "note": "Actual bundle-derived QA-only release APK on a new explicitly gated AVD; fictional/empty test records. No editing."
+  },
+  {
+    "file": "api35-font150.png",
+    "source": "kissaten/evidence/hydronudge/screenshots/launch-api35/font150.png",
+    "sha256": "9fc96dbfec162fda890e3871ed014d28e1c0630ab7981325e3fa0185529ac8f5",
+    "note": "Actual bundle-derived QA-only release APK on a new explicitly gated AVD; fictional/empty test records. No editing."
+  }
+]

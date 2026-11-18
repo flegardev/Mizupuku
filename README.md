@@ -1,5 +1,7 @@
 # Mizupuku — provisional Kissaten edition
 
+**13 November release preparation:** [current readiness, checks and owner actions](play-launch/RELEASE_READINESS.md). [Public privacy policy](https://hydronudge-privacy.vercel.app/mizupuku/). Production remains blocked; the older verification figures below describe the earlier source checkpoint.
+
 Previously HydroNudge. The existing offline Android application, updated in place. Application IDs, Room schema identities, existing preference/action identifiers and source signing configuration are retained.
 
 **Production status: BLOCKED.** This repository contains source and review materials. No Android/Play release is implied. Branding clearance, owner signing identity, Console/health declarations and broader stability, physical-device, minimum-API and accessibility checks remain open.

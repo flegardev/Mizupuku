@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "serial": "emulator-5554",
+  "avd": "HydroNudge_Pixel10a_API37",
+  "method": "adb reboot; normal persisted-userdata boot; no wipe/reset/uninstall",
+  "apps": {
+    "hydronudge": {
+      "roomDigestPreserved": true,
+      "preferencesByteIdentical": true
+    },
+    "returnmark": {
+      "roomDigestPreserved": true,
+      "preferencesByteIdentical": true
+    },
+    "orbit": {
+      "roomDigestPreserved": true,
+      "preferencesByteIdentical": true
+    }
+  },
+  "note": "Reboot and Room retention only; no claim that a configured reminder fired across reboot or Doze."
+}

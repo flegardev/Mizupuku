@@ -14,7 +14,7 @@ class DrinkActionReceiver : BroadcastReceiver() {
         val app = context.applicationContext as HydroApplication
 
         when (action) {
-            "app.hydronudge.DISMISS_STATUS" -> {
+            "com.tiniflegar.mizupuku.DISMISS_STATUS" -> {
                 val result = goAsync()
                 app.applicationScope.launch {
                     try {
@@ -24,7 +24,7 @@ class DrinkActionReceiver : BroadcastReceiver() {
                     }
                 }
             }
-            "app.hydronudge.SNOOZE_REMINDER" -> {
+            "com.tiniflegar.mizupuku.SNOOZE_REMINDER" -> {
                 val result = goAsync()
                 app.applicationScope.launch {
                     try {
@@ -35,10 +35,10 @@ class DrinkActionReceiver : BroadcastReceiver() {
                     }
                 }
             }
-            "app.hydronudge.SKIP_REMINDER" -> {
+            "com.tiniflegar.mizupuku.SKIP_REMINDER" -> {
                 context.getSystemService(NotificationManager::class.java)?.cancel(2)
             }
-            "app.hydronudge.ADD" -> {
+            "com.tiniflegar.mizupuku.ADD" -> {
                 val token = intent.getStringExtra("token") ?: return
                 val ml = intent.getIntExtra("ml", 0)
                 if (ml !in 1..20000) return

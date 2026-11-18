@@ -1,0 +1,5 @@
+{
+  "observed": [],
+  "note": "Observed ANR attribution/reason only; root cause not established. Full diagnostics are private. Production stability gate remains open.",
+  "activityManagerObservation": "dumpsys activity lastanr reported no ANR since boot, despite the visible System UI not-responding dialog. No stack-level cause is asserted."
+}

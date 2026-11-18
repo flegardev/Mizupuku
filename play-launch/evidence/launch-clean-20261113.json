@@ -1,0 +1,24 @@
+{
+  "command": [
+    "<workspace>\\hydronudge (1)\\gradlew.bat",
+    "--no-daemon",
+    "--no-configuration-cache",
+    "--console",
+    "plain",
+    "--max-workers=1",
+    "-I",
+    "<workspace>\\kissaten\\tools\\qa.init.gradle",
+    "clean",
+    ":app:assembleDebug",
+    ":app:testDebugUnitTest",
+    ":app:lintDebug",
+    ":app:lintRelease",
+    ":app:assembleDebugAndroidTest",
+    ":app:bundleRelease",
+    "-PkissatenUnsignedRelease=true"
+  ],
+  "exitCode": 0,
+  "seconds": 442.9,
+  "log": "<workspace>\\kissaten\\evidence\\hydronudge\\launch-clean-20261113.log",
+  "sourceFingerprint": "1e4a52c2658fc33e83a2a1d2ea018dbe956567b454940d97d6dfada254c13c20"
+}

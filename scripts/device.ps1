@@ -6,7 +6,7 @@ param(
 )
 . (Join-Path $PSScriptRoot '_common.ps1')
 $adb = Join-Path $env:ANDROID_HOME 'platform-tools\adb.exe'
-$package = 'app.hydronudge'
+$package = 'com.tiniflegar.mizupuku'
 $apk = Join-Path $script:ProjectRoot 'app\build\outputs\apk\debug\app-debug.apk'
 $outDir = Join-Path $script:ProjectRoot 'qa-reports\local-device'
 

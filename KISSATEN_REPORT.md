@@ -1,3 +1,5 @@
+> Current launch follow-up (13 November 2026): [release preparation](play-launch/RELEASE_READINESS.md). This report retains the earlier transformation evidence; use play-launch for current artifacts, tests and blockers.
+
 > Repository handoff: source, assets and reviewed QA summaries are prepared for GitHub synchronization on 12 November 2026. The audit below records the preceding local verification run. Its statements about no remote push describe that earlier run. Source publication does not constitute an Android or Play release. Original recovery archives and raw runtime records remain private on the workstation.
 
 # Mizupuku — implementation and verification

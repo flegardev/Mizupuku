@@ -1,0 +1,13 @@
+{
+  "title": "Mizupuku — Water Tracker",
+  "shortDescription": "Log water, set optional goals and enjoy gentle reminders.",
+  "fullDescription": "Mizupuku — your quiet offline companion.\n\nLog water with quick servings or a custom amount. Keep an editable history, set optional personal goals, review local insights and enable gentle reminders. Home-screen widgets and Quick Settings actions support everyday logging.\n\nMizupuku is a personal journal, not a medical device. It does not measure hydration, diagnose or treat conditions, or prescribe fluid needs. Individual needs and restrictions vary; seek a qualified professional for medical guidance.\n\nChoose light, dark, system or OLED appearance, local color palettes and a custom accent. Japanese-designed fonts and original café artwork bring warmth to everyday use.\n\nFree forever. No ads, subscriptions, paid features, mandatory accounts, AI or external analytics. Core features work offline and personal records remain in private on-device storage. Automatic Android cloud backup is disabled.\n\nYou control exports through the Android document picker. Exported files are unencrypted, and a provider you select may store or sync them in the cloud. Keep private backups before changing devices.\n\nAndroid permissions, battery settings and background limits can delay reminders.\n\nSupport: tini.flegar@gmail.com",
+  "categoryRecommendation": "Health & Fitness",
+  "supportEmail": "tini.flegar@gmail.com",
+  "privacyPolicyUrl": "https://hydronudge-privacy.vercel.app/mizupuku/",
+  "locale": "en-US",
+  "localeStatus": "English draft; preserve the actual Console locale. Historical HydroNudge locale en-IN is not currently reverified.",
+  "pricing": "FREE",
+  "countriesRecommendation": "Slovenia/SI initially, recommendation only; owner chooses actual countries.",
+  "status": "READY TO ENTER; not saved/submitted in Console"
+}

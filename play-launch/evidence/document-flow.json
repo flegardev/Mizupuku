@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "serial": "emulator-5554",
+  "method": {
+    "class": "app.hydronudge.qa.EmulatorBackupFlowTest",
+    "test": "exportAndMergeThroughAndroidDocuments"
+  },
+  "sourceLog": "<workspace>\\kissaten\\evidence\\hydronudge\\instrumentation\\OceanFunctionalTest.log",
+  "note": "Collected from the successful 12-test instrumented suite: real CreateDocument/OpenDocument, exported fixture removed then merged back, stable fields and all original record IDs asserted; only the QA fixture/export cleaned up. This is not a second separately executed test."
+}

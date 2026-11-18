@@ -30,7 +30,7 @@ if ($LASTEXITCODE -ne 0) { throw 'Bundletool validation failed.' }
 $manifest = & "$env:JAVA_HOME/bin/java.exe" -jar $tool dump manifest "--bundle=$bundle" --module=base 2>$null
 if ($LASTEXITCODE -ne 0) { throw 'Manifest extraction failed.' }
 [xml]$xml = $manifest -join "`n"
-if ($xml.manifest.package -ne 'app.hydronudge') { throw 'Unexpected package identity.' }
+if ($xml.manifest.package -ne 'com.tiniflegar.mizupuku') { throw 'Unexpected package identity.' }
 if ($manifest -match 'android.permission.INTERNET|com.android.vending.BILLING|permission.AD_ID|android:debuggable="true"|<instrumentation') { throw 'Unexpected release manifest content; investigate.' }
 Get-FileHash -LiteralPath $bundle -Algorithm SHA256
 Write-Host 'PASS local preflight. Owner must still verify versionCode history, current policy/account eligibility, Console certificates and review the actual Console release before authorizing submission.'

@@ -1,0 +1,116 @@
+{
+  "app": "hydronudge",
+  "serial": "emulator-5554",
+  "api": 37,
+  "cold": [
+    {
+      "iteration": 1,
+      "responsive": true
+    },
+    {
+      "iteration": 2,
+      "responsive": true
+    },
+    {
+      "iteration": 3,
+      "responsive": true
+    }
+  ],
+  "hot": [
+    {
+      "cycle": 1,
+      "profile": "standard",
+      "size": "1080x1920",
+      "density": 420,
+      "font": 1,
+      "reducedMotion": false,
+      "responsive": true
+    },
+    {
+      "cycle": 1,
+      "profile": "small",
+      "size": "720x1280",
+      "density": 360,
+      "font": 1,
+      "reducedMotion": false,
+      "responsive": true
+    },
+    {
+      "cycle": 1,
+      "profile": "font150",
+      "size": "720x1280",
+      "density": 360,
+      "font": 1.5,
+      "reducedMotion": false,
+      "responsive": true
+    },
+    {
+      "cycle": 1,
+      "profile": "tablet",
+      "size": "1600x2560",
+      "density": 240,
+      "font": 1,
+      "reducedMotion": false,
+      "responsive": true
+    },
+    {
+      "cycle": 1,
+      "profile": "standard-return",
+      "size": "1080x1920",
+      "density": 420,
+      "font": 1,
+      "reducedMotion": false,
+      "responsive": true
+    },
+    {
+      "cycle": 2,
+      "profile": "standard",
+      "size": "1080x1920",
+      "density": 420,
+      "font": 1,
+      "reducedMotion": true,
+      "responsive": true
+    },
+    {
+      "cycle": 2,
+      "profile": "small",
+      "size": "720x1280",
+      "density": 360,
+      "font": 1,
+      "reducedMotion": true,
+      "responsive": true
+    },
+    {
+      "cycle": 2,
+      "profile": "font150",
+      "size": "720x1280",
+      "density": 360,
+      "font": 1.5,
+      "reducedMotion": true,
+      "responsive": true
+    },
+    {
+      "cycle": 2,
+      "profile": "tablet",
+      "size": "1600x2560",
+      "density": 240,
+      "font": 1,
+      "reducedMotion": true,
+      "responsive": true
+    },
+    {
+      "cycle": 2,
+      "profile": "standard-return",
+      "size": "1080x1920",
+      "density": 420,
+      "font": 1,
+      "reducedMotion": true,
+      "responsive": true
+    }
+  ],
+  "passed": true,
+  "roomDigestPreserved": true,
+  "preferencesPreserved": true,
+  "note": "3 cold launches and 10 hot transitions on one software-rendered API 37 AVD, with normal/reduced motion. Bounded reproduction check; historical ANR/watchdog causes are not established or erased by a later pass.",
+  "candidateStage": "Fresh launch-clean-20261113 candidate; Fumipoka/Yorulune later received UI text-contrast-only changes. Final binary checks are separate."
+}

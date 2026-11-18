@@ -1,0 +1,10 @@
+{
+  "api37": [
+    "Two test-APK installation timeouts before runner startup; normal reboot retained all Room rows and DataStore bytes.",
+    "System UI ANR dialog interrupted final Yorulune UI navigation after reboot. Original logs and screenshot retained; root cause unestablished."
+  ],
+  "api35": [
+    "Preinstalled Messages ANR dialog interrupted Settings radio restoration; original diagnostics retained. Repeated with supported radio shell commands and verified no active network."
+  ],
+  "productionStability": "BLOCKED; later bounded passes do not establish or erase causes."
+}
